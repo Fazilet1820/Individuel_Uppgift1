@@ -1,10 +1,15 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        while(true) {
+        boolean programIsRunning=true;
+        while(programIsRunning) {
+
+            try {
+
             System.out.println("***** Welcome to the program! *****");
             System.out.println("Please choose what you want");
             System.out.println("Press '1' to pay salaries to employees");
@@ -20,7 +25,7 @@ public class Main {
                     myMethods.paySalaries();
                     break;
                 case 2:
-                    myMethods. creatNewBill();
+                    myMethods.creatNewBill();
                     break;
                 case 3:
                     myMethods.payBill();
@@ -31,12 +36,19 @@ public class Main {
                     break;
 
                 default:
-                        System.out.println("Invalid number. Please choose a number between 1-4 ! ");
+                    System.out.println("Invalid number. Please choose a number between 1-4 ! ");
 
+            }
+
+                }
+                catch (InputMismatchException e) {
+                System.out.println("Invalid character. Please enter only numbers");
+                scanner.nextLine(); // yanlis girisi temizlemek icin
+            }
 
 
             }
-        }
+
 
     }
 }

@@ -28,7 +28,8 @@ public class myMethods {
             double afterTax= salaries[i]*0.7;
             System.out.println("Salary after tax deduction  for "+ (i+1) + ". worker " + afterTax +"kronor" );
         }
-        System.out.println("Thank you for using this program");
+        System.out.println("Thank you for using this program. ");
+        System.out.println("Have a good day");
 
     }
 
@@ -41,14 +42,16 @@ public class myMethods {
 
         int totalBills=scanner.nextInt();
         double moms= totalBills*0.25;
-
         double netTotal=totalBills- moms;
+        double kontoSaldo=1000000.0;
 
         System.out.println("Your total of the new bills: " + totalBills);
-        System.out.println("Total of the moms: "+ moms);
+        System.out.println("Total of the moms of new bill: "+ moms);
         System.out.println("Net total: " + netTotal);
+        System.out.println("The sum of your account balance and this new bill is :"+ (kontoSaldo+ totalBills));
+        System.out.println("Thank you for using this program.");
+        System.out.println("Have a good day");
 
-        System.out.println("Thank you for using this program");
     }
 
 
@@ -95,11 +98,13 @@ public class myMethods {
             System.out.println("Please write an invalid amount!");
         }
         System.out.println("Thank you for using this program");
+        System.out.println("Have a good day");
 
     }
 
     public static void endProgram (){
         System.out.println("***** The program has ended *****");
+        System.out.println("Have a good day");
         System.exit(0);
     }
 
